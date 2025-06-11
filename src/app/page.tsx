@@ -11,6 +11,8 @@ export default function Home() {
         <Button size="md" variant="secondary">Next</Button>
         <Button size="lg" variant="secondary">Next</Button>
         <Button size="sm" variant="text">Skip</Button>
+        <Button size="xl" variant="secondary">Log Out</Button>
+        <Button size="xl" variant="primary">Delete Account</Button>
       </div>
     </main>
   );

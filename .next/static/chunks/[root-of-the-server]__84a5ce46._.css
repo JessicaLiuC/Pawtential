@@ -648,6 +648,10 @@
     background-color: #3b2a1a;
   }
 
+  .bg-\[\#A7BBD0\] {
+    background-color: #a7bbd0;
+  }
+
   .bg-\[\#BF8E49\] {
     background-color: #bf8e49;
   }
@@ -782,6 +786,10 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+
+  .text-\[14px\] {
+    font-size: 14px;
   }
 
   .text-\[20px\] {
