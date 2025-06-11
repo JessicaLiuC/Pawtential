@@ -14,7 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed bottom-0 w-full bg-white shadow-inner border-t flex justify-around py-2">
+    <nav className="fixed bottom-0 w-full bg-transparent shadow-inner border-t border-gray-800 flex justify-around py-2">
       {navItems.map(({ href, label, icon: Icon }) => {
         const isActive = pathname === href;
         return (
