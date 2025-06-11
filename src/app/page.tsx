@@ -1,8 +1,21 @@
+'use client';
+import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import Button from '../components/button';
+import Dropdown from '../components/dropdown';
 
+
+const serviceOptions = [
+  { value: '', label: 'Select Service' },
+  { value: 'grooming', label: 'Grooming' },
+  { value: 'walking', label: 'Walking' },
+  { value: 'boarding', label: 'Boarding' },
+  { value: 'daycare', label: 'Daycare' },
+  { value: 'training', label: 'Training' },
+]
 
 export default function Home() {
+  const [selected, setSelected] = useState('');
   return (
     <main>
       <Navbar />
@@ -13,6 +26,18 @@ export default function Home() {
         <Button size="sm" variant="text">Skip</Button>
         <Button size="xl" variant="secondary">Log Out</Button>
         <Button size="xl" variant="primary">Delete Account</Button>
+        <Dropdown
+          options={serviceOptions}
+          value={selected}
+          onChange={setSelected}
+          className="w-71 h-12 rounded-[12px] bg-blue-200 px-4 py-2"
+        />
+        <Dropdown
+          options={serviceOptions}
+          value={selected}
+          onChange={setSelected}
+          className="w-35 h-6 rounded-[20px] bg-blue-200"
+        />
       </div>
     </main>
   );
