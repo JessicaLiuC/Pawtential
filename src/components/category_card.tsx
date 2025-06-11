@@ -31,3 +31,11 @@ export default function CategoryCard({
     </div>
   );
 }
+
+{/* 
+<CategoryCard 
+  title="Training"
+  description="learn behavior, build trust, and develop skills"
+  imageUrl="/corgi.png"
+/>  //category card in home page in Figma
+*/}

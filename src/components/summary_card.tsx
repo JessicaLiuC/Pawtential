@@ -39,3 +39,18 @@ export default function SummaryCard({
     </div>
   );
 }
+
+{/* 
+<SummaryCard
+  items={[
+    { label: 'Service', value: 'Dog Training' },
+    { label: 'Dog', value: 'Border Collie' },
+    { label: 'Trainer', value: 'Jack Simon' },
+    { label: 'Training Type', value: 'Behavior Training' },
+    { label: 'Grooming Specialist', value: 'N/A' },
+    { label: 'Consulting Type', value: 'N/A' },
+    { label: 'Consulting Specialist', value: 'N/A' },
+  ]}
+  onConfirm={() => alert('Booking confirmed!')}
+/>  //summary card in booking confirmationpage in Figma
+*/}

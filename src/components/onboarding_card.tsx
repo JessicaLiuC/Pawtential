@@ -34,3 +34,12 @@ export default function OnboardingCard({
     </div>
   );
 }
+
+{/* 
+<OnboardingCard
+  date="15th July, 2025"
+  title="Dog Grooming"
+  time="10:00 AM - 11:00 AM"
+  imageUrl="/dog1.png"
+/>  //onboarding card in profile page in Figma
+*/}

@@ -40,7 +40,7 @@ function Button({ children, variant = 'primary', size = 'md', fullWidth = false,
     }, this);
 }
 _c = Button;
-var _c;
+{}var _c;
 __turbopack_context__.k.register(_c, "Button");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);

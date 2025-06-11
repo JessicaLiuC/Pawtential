@@ -47,3 +47,13 @@ export default function Button({
     </button>
   );
 }
+
+{/* 
+<Button size="xs" variant="light">Next</Button>   //book button in Figma
+<Button size="sm" variant="secondary">Next</Button>   //onboarding button in Figma
+<Button size="md" variant="secondary">Next</Button>   //confirm booking button in Figma
+<Button size="lg" variant="secondary">Next</Button>   //make an appointment button in Figma
+<Button size="sm" variant="text">Skip</Button>   //skip button in Figma
+<Button size="xl" variant="secondary">Log Out</Button>   //log out button in Figma
+<Button size="xl" variant="primary">Delete Account</Button>  //delete account button in Figma
+*/}

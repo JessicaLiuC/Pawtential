@@ -41,3 +41,13 @@ export default function ServiceCard({
     </div>
   );
 }
+
+{/* 
+<ServiceCard
+  title="Expert Training"
+  experience="Experience: 10+ years"
+  price="Starting at $150"
+  duration="1 hour per lesson"
+  imageUrl="/corgi.png"
+/>  //service card in home details page in Figma
+*/}

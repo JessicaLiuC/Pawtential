@@ -39,3 +39,9 @@ export default function HeroCard({
     </div>
   );
 }
+
+{/* 
+<div className="flex justify-center items-center ">
+  <HeroCard />
+</div>     //hero card in home page in Figma
+*/}
