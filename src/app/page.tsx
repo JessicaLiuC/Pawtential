@@ -6,6 +6,7 @@ import Dropdown from '../components/dropdown';
 import HeroCard from '../components/hero_card';
 import CategoryCard from '../components/category_card';
 import OnboardingCard from '../components/onboarding_card';
+import ServiceCard from '../components/service_card';
 
 const serviceOptions = [
   { value: '', label: 'Select Service' },
@@ -54,6 +55,13 @@ export default function Home() {
           title="Dog Grooming"
           time="10:00 AM - 11:00 AM"
           imageUrl="/dog1.png"
+        />
+        <ServiceCard
+          title="Expert Training"
+          experience="Experience: 10+ years"
+          price="Starting at $150"
+          duration="1 hour per lesson"
+          imageUrl="/corgi.png"
         />
       </div>
     </main>

@@ -14,8 +14,8 @@ export default function CategoryCard({
   imageUrl = '/corgi.png',
 }: CategoryCardProps) {
   return (
-    <div className="w-[170px] h-[245px] rounded-[25px] bg-[#FFBD61] flex flex-col items-center relative overflow-visible">
-      <div className="w-full flex justify-center relative z-10">
+    <div className="w-[170px] h-[245px] rounded-[25px] bg-[#FFBD61] flex flex-col items-center relative">
+      <div className="w-full flex justify-center relative">
         <Image
           src={imageUrl}
           alt={title}
@@ -24,7 +24,7 @@ export default function CategoryCard({
           className="object-contain absolute"
         />
       </div>
-      <div className="w-full h-[120px] rounded-b-[25px] bg-white flex flex-col justify-center mt-auto pt-12 z-0">
+      <div className="w-full h-[120px] rounded-b-[25px] bg-white flex flex-col justify-center mt-auto pt-12">
         <h3 className="text-[20px] font-bold text-[#463327] ml-3">{title}</h3>
         <p className="text-[13px] text-gray-700 mb-3 ml-3">{description}</p>
       </div>
