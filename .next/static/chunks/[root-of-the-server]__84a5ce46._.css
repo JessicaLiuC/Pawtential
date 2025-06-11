@@ -141,7 +141,12 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -375,6 +380,10 @@
     left: 50%;
   }
 
+  .z-50 {
+    z-index: 50;
+  }
+
   .mx-auto {
     margin-inline: auto;
   }
@@ -403,8 +412,16 @@
     margin-bottom: calc(var(--spacing) * 3);
   }
 
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
+  }
+
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
   }
 
   .ml-3 {
@@ -415,8 +432,16 @@
     display: flex;
   }
 
+  .grid {
+    display: grid;
+  }
+
   .inline-block {
     display: inline-block;
+  }
+
+  .h-2 {
+    height: calc(var(--spacing) * 2);
   }
 
   .h-6 {
@@ -455,12 +480,28 @@
     height: 245px;
   }
 
+  .h-\[320px\] {
+    height: 320px;
+  }
+
   .h-\[363px\] {
     height: 363px;
   }
 
+  .h-\[577px\] {
+    height: 577px;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
   .min-h-screen {
     min-height: 100vh;
+  }
+
+  .w-2 {
+    width: calc(var(--spacing) * 2);
   }
 
   .w-15 {
@@ -487,6 +528,10 @@
     width: calc(var(--spacing) * 90);
   }
 
+  .w-\[85px\] {
+    width: 85px;
+  }
+
   .w-\[90\%\] {
     width: 90%;
   }
@@ -499,8 +544,28 @@
     width: 170px;
   }
 
+  .w-\[185px\] {
+    width: 185px;
+  }
+
   .w-\[220px\] {
     width: 220px;
+  }
+
+  .w-\[280px\] {
+    width: 280px;
+  }
+
+  .w-\[300px\] {
+    width: 300px;
+  }
+
+  .w-\[310px\] {
+    width: 310px;
+  }
+
+  .w-\[320px\] {
+    width: 320px;
   }
 
   .w-\[350px\] {
@@ -528,6 +593,10 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .flex-col {
     flex-direction: column;
   }
@@ -550,6 +619,30 @@
 
   .justify-center {
     justify-content: center;
+  }
+
+  .justify-start {
+    justify-content: flex-start;
+  }
+
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
+
+  .gap-\[22px\] {
+    gap: 22px;
   }
 
   :where(.space-y-4 > :not(:last-child)) {
@@ -576,6 +669,10 @@
 
   .rounded-\[20px\] {
     border-radius: 20px;
+  }
+
+  .rounded-\[24px\] {
+    border-radius: 24px;
   }
 
   .rounded-\[25px\] {
@@ -620,6 +717,14 @@
     background-color: #bf8e49;
   }
 
+  .bg-\[\#C49A6C\] {
+    background-color: #c49a6c;
+  }
+
+  .bg-\[\#E6D3B3\] {
+    background-color: #e6d3b3;
+  }
+
   .bg-\[\#FEFDFC\] {
     background-color: #fefdfc;
   }
@@ -654,6 +759,10 @@
 
   .object-contain {
     object-fit: contain;
+  }
+
+  .object-cover {
+    object-fit: cover;
   }
 
   .p-2 {
@@ -704,6 +813,14 @@
     padding-block: calc(var(--spacing) * 4);
   }
 
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
   }
@@ -720,8 +837,22 @@
     text-align: center;
   }
 
+  .text-left {
+    text-align: left;
+  }
+
   .text-right {
     text-align: right;
+  }
+
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
 
   .text-base {
@@ -770,12 +901,21 @@
     font-weight: var(--font-weight-medium);
   }
 
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+
   .text-\[\#463327\] {
     color: #463327;
   }
 
   .text-\[\#BF8E49\] {
     color: #bf8e49;
+  }
+
+  .text-\[\#C49A6C\] {
+    color: #c49a6c;
   }
 
   .text-\[\#E6AA57\] {
@@ -850,6 +990,11 @@
     .hover\:opacity-90:hover {
       opacity: .9;
     }
+  }
+
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
   }
 }
 

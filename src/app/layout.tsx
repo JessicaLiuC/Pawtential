@@ -30,7 +30,6 @@ export default function RootLayout({
       >
         <div className="min-h-screen relative">
           {children}
-          <Navbar />
         </div>
       </body>
     </html>

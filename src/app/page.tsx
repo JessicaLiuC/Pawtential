@@ -1,69 +1,55 @@
 'use client';
-import React, { useState } from 'react';
-import Navbar from '../components/navbar';
+import React from 'react';
+import Image from 'next/image';
 import Button from '../components/button';
-import Dropdown from '../components/dropdown';
-import HeroCard from '../components/hero_card';
-import CategoryCard from '../components/category_card';
-import OnboardingCard from '../components/onboarding_card';
-import ServiceCard from '../components/service_card';
+import { useRouter } from 'next/navigation';
 
-const serviceOptions = [
-  { value: '', label: 'Select Service' },
-  { value: 'grooming', label: 'Grooming' },
-  { value: 'walking', label: 'Walking' },
-  { value: 'boarding', label: 'Boarding' },
-  { value: 'daycare', label: 'Daycare' },
-  { value: 'training', label: 'Training' },
-]
+export default function Onboarding1() {
+  const router = useRouter(); 
 
-export default function Home() {
-  const [selected, setSelected] = useState('');
   return (
-    <main className="bg-[#FFF5EE]">
-      <Navbar />
-      <div className="space-y-4 p-4 flex flex-col pb-24">
-        <Button size="xs" variant="light">Next</Button>
-        <Button size="sm" variant="secondary">Next</Button>
-        <Button size="md" variant="secondary">Next</Button>
-        <Button size="lg" variant="secondary">Next</Button>
-        <Button size="sm" variant="text">Skip</Button>
-        <Button size="xl" variant="secondary">Log Out</Button>
-        <Button size="xl" variant="primary">Delete Account</Button>
-        <Dropdown
-          options={serviceOptions}
-          value={selected}
-          onChange={setSelected}
-          className="w-71 h-12 rounded-[12px] bg-blue-200 px-4 py-2"
-        />
-        <Dropdown
-          options={serviceOptions}
-          value={selected}
-          onChange={setSelected}
-          className="w-35 h-6 rounded-[20px] bg-blue-200"
-        />
-        <div className="flex justify-center items-center ">
-          <HeroCard />
-        </div>
-        <CategoryCard 
-          title="Training"
-          description="learn behavior, build trust, and develop skills"
-          imageUrl="/corgi.png"
-        />
-        <OnboardingCard
-          date="15th July, 2025"
-          title="Dog Grooming"
-          time="10:00 AM - 11:00 AM"
-          imageUrl="/dog1.png"
-        />
-        <ServiceCard
-          title="Expert Training"
-          experience="Experience: 10+ years"
-          price="Starting at $150"
-          duration="1 hour per lesson"
-          imageUrl="/corgi.png"
+    <div className="min-h-screen flex flex-col items-center justify-start bg-white pt-4">
+      <div className="mb-6">
+        <Image
+          src="/logo.png"
+          alt="Pawtential Logo"
+          width={120}
+          height={30}
+          className="mx-auto"
         />
       </div>
-    </main>
+      <div className="w-[320px] h-[320px] rounded-full overflow-hidden mb-8">
+        <Image
+          src="/running_dog.jpg"
+          alt="Happy Dog"
+          width={320}
+          height={320}
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <h1 className="text-3xl font-bold text-[#463327] mb-2 text-center">Welcome!</h1>
+      <p className="w-[300px] text-[20px] text-[#463327] mb-4 text-left">
+        Helping dogs thrive with love, care, and expert training.
+      </p>
+      <div className="flex items-center justify-center gap-2 mb-4">
+        <span className="w-2 h-2 bg-[#C49A6C] rounded-full inline-block" />
+        <span className="w-2 h-2 bg-[#E6D3B3] rounded-full inline-block" />
+        <span className="w-2 h-2 bg-[#E6D3B3] rounded-full inline-block" />
+      </div>
+      <Button 
+        size="sm" 
+        variant="secondary"
+        onClick={() => router.push('/page2')}
+      >
+        Next
+      </Button>
+      <Button 
+        size="sm" 
+        variant="text"
+        onClick={() => router.push('/home')}
+      >
+        Skip
+      </Button>
+    </div>
   );
 }

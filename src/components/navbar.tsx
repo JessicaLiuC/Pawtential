@@ -8,13 +8,13 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/', label: 'Home', icon: Home },
+    { href: '/home', label: 'Home', icon: Home },
     { href: '/book', label: 'Book', icon: Calendar },
     { href: '/profile', label: 'Profile', icon: User },
   ];
 
   return (
-    <nav className="fixed bottom-0 w-full bg-[#FFF5EE] shadow-inner border-t border-gray-800 flex justify-around py-2">
+    <nav className="fixed bottom-0 w-full bg-[#FFF5EE] shadow-inner border-t border-gray-800 flex justify-around py-2 z-50">
       {navItems.map(({ href, label, icon: Icon }) => {
         const isActive = pathname === href;
         return (
