@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import Button from '../components/button';
 import Dropdown from '../components/dropdown';
-
+import HeroCard from '../components/hero_card';
+import CategoryCard from '../components/category_card';
+import OnboardingCard from '../components/onboarding_card';
 
 const serviceOptions = [
   { value: '', label: 'Select Service' },
@@ -17,9 +19,10 @@ const serviceOptions = [
 export default function Home() {
   const [selected, setSelected] = useState('');
   return (
-    <main>
+    <main className="bg-[#FFF5EE]">
       <Navbar />
-      <div className="space-y-4 p-4 flex flex-col">
+      <div className="space-y-4 p-4 flex flex-col pb-24">
+        <Button size="xs" variant="light">Next</Button>
         <Button size="sm" variant="secondary">Next</Button>
         <Button size="md" variant="secondary">Next</Button>
         <Button size="lg" variant="secondary">Next</Button>
@@ -37,6 +40,20 @@ export default function Home() {
           value={selected}
           onChange={setSelected}
           className="w-35 h-6 rounded-[20px] bg-blue-200"
+        />
+        <div className="flex justify-center items-center ">
+          <HeroCard />
+        </div>
+        <CategoryCard 
+          title="Training"
+          description="learn behavior, build trust, and develop skills"
+          imageUrl="/corgi.png"
+        />
+        <OnboardingCard
+          date="15th July, 2025"
+          title="Dog Grooming"
+          time="10:00 AM - 11:00 AM"
+          imageUrl="/dog1.png"
         />
       </div>
     </main>
