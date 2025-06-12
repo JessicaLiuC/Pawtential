@@ -1,20 +1,34 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 type CategoryCardProps = {
   title?: string;
   description?: string;
   imageUrl?: string;
+  href?: string;
 };
 
 export default function CategoryCard({
   title = 'Training',
   description = 'learn behavior, build trust, and develop skills',
   imageUrl = '/corgi.png',
+  href = '',
 }: CategoryCardProps) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (href) {
+      router.push(href);
+    }
+  };
+
   return (
-    <div className="w-[170px] h-[245px] rounded-[25px] bg-[#FFBD61] flex flex-col items-center relative">
+    <div 
+      className="w-[170px] h-[245px] rounded-[25px] bg-[#FFBD61] flex flex-col items-center relative cursor-pointer"
+      onClick={handleClick}
+    >
       <div className="w-full flex justify-center relative">
         <Image
           src={imageUrl}

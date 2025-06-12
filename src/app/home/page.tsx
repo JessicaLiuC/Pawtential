@@ -5,9 +5,11 @@ import Image from 'next/image';
 import HeroCard from '../../components/hero_card';
 import CategoryCard from '../../components/category_card';
 import MapWrapper from '../../components/mapWrapper';
-
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main className="bg-[#FFF5EE]">
       <Navbar />
@@ -33,21 +35,25 @@ export default function Home() {
               title="Training"
               description="Learn behavior, build trust, and develop skills"
               imageUrl="/corgi.png"
+              href="/home/training"
             />
             <CategoryCard
               title="Boarding"
               description="Safe, caring stay for dogs while away"
               imageUrl="/dog-blue.png"
+              href="/home/boarding"
             />
             <CategoryCard
               title="Grooming"
               description="Clean, trim, pamper your dog's coat"
               imageUrl="/dog-spotted.png"
+              href="/home/grooming"
             />
             <CategoryCard
               title="Consulting"
               description="Expert advice for your dog's behavior needs"
               imageUrl="/dog-stick.png"
+              href="/home/consulting"
             />
           </div>
         </div>

@@ -12,9 +12,9 @@ type ServiceCardProps = {
 
 export default function ServiceCard({
   title = 'Expert Training',
-  experience = 'Experience: 10+ years',
+  experience = '',
   price = 'Starting at $150',
-  duration = '1 hour per lesson',
+  duration = '',
   imageUrl = '/corgi.png',
 }: ServiceCardProps) {
   return (
@@ -23,12 +23,12 @@ export default function ServiceCard({
         <Image
           src={imageUrl}
           alt={title}
-          width={170}
+          width={180}
           height={180}
           className="object-contain"
         />
       </div>
-      <div className="w-[95%] mx-auto bg-white rounded-[20px] flex flex-row justify-between items-center px-3 py-4 absolute left-1/2 -translate-x-1/2 bottom-3 shadow">
+      <div className="w-[95%] h-[80px] mx-auto bg-white rounded-[20px] flex flex-row justify-between items-center px-3 py-4 absolute left-1/2 -translate-x-1/2 bottom-3 shadow">
         <div>
           <div className="text-[20px] font-bold text-[#463327]">{title}</div>
           <div className="text-[13px] text-gray-700">{experience}</div>
