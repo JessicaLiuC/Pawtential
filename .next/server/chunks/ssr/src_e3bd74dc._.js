@@ -39,7 +39,7 @@ function Button({ children, variant = 'primary', size = 'md', fullWidth = false,
         columnNumber: 5
     }, this);
 }
-}}),
+{}}}),
 "[project]/src/app/page3/page.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
