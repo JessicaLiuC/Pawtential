@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import 'react-day-picker/style.css';
 import "../styles/globals.css";
-import Navbar from "../components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
